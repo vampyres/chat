@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OnionShare Chat</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header class="clearfix">
+    <img class="logo" src="index_files/logo.png" alt="OnionShare Logo">
+    <h1>OnionShare Chat</h1>
+  </header>
+  <noscript>
+    <p>
+      Chat <b>requires JavaScript</b>, so you must set your Tor Browser security
+      level to <b>Safer</b> or <b>Standard</b> to join.
+    </p>
+  </noscript>
+
+  <div class="app">
+    <div class="screen join-screen active">
+      <div class="form">
+        <h2>Join Chatroom</h2>
+        <div class="form-input">
+          <label for="username">Username</label>
+          <input type="text" id="username">
+        </div>
+        <div class="form-input">
+          <button id="join-user">Join Chatroom</button>
+        </div>
+      </div>
+    </div>
+    <div class="screen chat-screen">
+      <div class="header">
+        <div class="logo">Chatroom</div>
+        <button id="exit-chatroom"></button>
+      </div>
+      <div class="messages">
+        <!-- Dummy Messages -->
+      </div>
+      <div class="typebox">
+        <input type="text" id="message-input">
+        <button id="send-message">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="socket.io/socket.io.js"></script>
+  <script src="code.js"></script>
+</body>
+</html>
